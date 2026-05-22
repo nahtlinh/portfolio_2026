@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhat Linh Ngo - Portfolio 2025</title>
+  <meta name="description" content="Interactive digital portfolio of Nhat Linh Ngo - International Business student at Foreign Trade University. Showcase of projects including IBSynergy, Hồi Ức Hoa Lửa, and Talented Auditor Cup 2025.">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Outfit (modern sans), Playfair Display (luxurious serif), Playpen Sans (playful script/sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playpen+Sans:wght@300;400;500;600;700&family=VT323&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Floating Nav Bar -->
+  <nav class="glass-nav" id="main-nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="badge-pill lime">PORTFOLIO | 2025</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="spawn-butterfly-btn" title="Spawn a butterfly!" class="btn-icon">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </button>
+      </div>
+      <div class="nav-mobile-toggle" id="mobile-nav-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <div class="mobile-nav-container">
+      <div class="mobile-nav-header">
+        <span class="badge-pill lime">PORTFOLIO | 2025</span>
+        <button id="mobile-nav-close" class="btn-icon"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Background Layer -->
+  <div class="bg-container">
+    <div class="bg-image-layer"></div>
+    <div class="bg-overlay-layer"></div>
+  </div>
+
+  <!-- Butterfly & Decor Layer -->
+  <div class="decor-container" id="decor-container">
+    <!-- Glowing heart -->
+    <div class="glowing-neon-heart"></div>
+  </div>
+
+  <!-- Scroll Container -->
+  <main class="content-wrapper">
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="glass-card hero-card fade-in">
+        <div class="hero-logo-box">
+          <span class="decor-butterfly">🦋</span>
+          <h1 class="logo-title font-serif">Portfolio</h1>
+          <span class="decor-butterfly right">🦋</span>
+        </div>
+        <h2 class="hero-subtitle font-pixel">NGO NHAT LINH</h2>
+        
+        <div class="hero-divider">
+          <div class="checkerboard-strip"></div>
+        </div>
+
+        <div class="hero-footer">
+          <a href="#about" class="btn-cta">Explore About Me <i class="fa-solid fa-arrow-down"></i></a>
+          <div class="hero-contacts">
+            <span><i class="fa-solid fa-phone"></i> 0944624406</span>
+            <span><i class="fa-solid fa-envelope"></i> nhatlinh446@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="about-section">
+      <div class="section-title-wrapper">
+        <span class="badge-pill lime">ABOUT ME</span>
+      </div>
+      
+      <div class="about-grid">
+        <!-- Bio Card -->
+        <div class="glass-card bio-card card-reveal">
+          <div class="card-inner-layout">
+            <div class="bio-text">
+              <h3 class="font-serif">Hi, I'm Nhat Linh</h3>
+              <p class="subtitle-text">A first-year International Business student passionate about design, content creation, and project coordination.</p>
+              <p>I enjoy developing visual concepts, writing contents, and managing creative projects from ideation to execution. Currently, I'm working on improving my technical skills and looking for opportunities to grow and contribute in real-world environments.</p>
+              <p class="quote-text font-serif">"Let's turn ideas into impact - together."</p>
+            </div>
+            <div class="profile-photo-container">
+              <!-- Ripped notebook paper style frame in CSS -->
+              <div class="notebook-paper-frame">
+                <img src="images/portfolio_p2_4.png" alt="Nhat Linh Ngo" class="profile-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills & Education Card -->
+        <div class="glass-card skills-card card-reveal">
+          <h3 class="card-subtitle font-serif">Education & Qualifications</h3>
+          <div class="education-block">
+            <div class="edu-item">
+              <div class="edu-header">
+                <strong>Foreign Trade University</strong>
+                <span class="timeline-date">2024 - 2028</span>
+              </div>
+              <div class="edu-detail">International Business - Advanced Program</div>
+            </div>
+          </div>
+
+          <h3 class="card-subtitle font-serif">Certifications</h3>
+          <div class="certifications-grid">
+            <div class="cert-item"><span class="badge-tag">SAT: 1500</span></div>
+            <div class="cert-item"><span class="badge-tag">IELTS: 7.5</span></div>
+            <div class="cert-item"><span class="badge-tag">MOS Word: 981</span></div>
+          </div>
+
+          <h3 class="card-subtitle font-serif">Achievements</h3>
+          <ul class="achievements-list">
+            <li><i class="fa-solid fa-trophy text-lime"></i> Top 15 Elite Case-based Learning 2024</li>
+            <li><i class="fa-solid fa-rocket text-lime"></i> Top 30 Startup Program 2024</li>
+          </ul>
+
+          <h3 class="card-subtitle font-serif">Skills Matrix</h3>
+          <div class="skills-section-blocks">
+            <div class="skill-category">
+              <h4>Software & Tools</h4>
+              <div class="skill-tags">
+                <span class="skill-tag"><i class="fa-simple Ps-icon">Ps</i> Photoshop</span>
+                <span class="skill-tag"><i class="fa-simple Ai-icon">Ai</i> Illustrator</span>
+                <span class="skill-tag"><i class="fa-solid fa-paintbrush"></i> Canva</span>
+                <span class="skill-tag"><i class="fa-solid fa-video"></i> CapCut</span>
+                <span class="skill-tag"><i class="fa-solid fa-file-word"></i> MS Office</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Personal Skills</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Content Writing</span>
+                <span class="skill-tag">Video Editing</span>
+                <span class="skill-tag">Project Management</span>
+                <span class="skill-tag">Partnership Building</span>
+                <span class="skill-tag">Event Operations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="experience-section">
+      <div class="section-title-wrapper">
+        <span class="badge-pill lime">EXPERIENCE</span>
+      </div>
+      
+      <div class="timeline-container">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-card-wrapper left card-reveal">
+          <div class="glass-card timeline-card">
+            <div class="timeline-badge">12/2024 - Present</div>
+            <h3 class="timeline-title font-serif">Club of Future Accountants and Auditors (CFAA - FTU)</h3>
+            <h4 class="timeline-role">Club President (Former Media Dept Member)</h4>
+            <ul class="timeline-bullets">
+              <li>Coordinated club operations and partnership activities for a 70-member organization through strategic planning and cross-functional collaboration.</li>
+              <li>Led the execution of <strong>Talented Auditor Cup Season 16th</strong> and related events, attracting 700+ applicants nationwide and supporting student engagement.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-card-wrapper right card-reveal">
+          <div class="glass-card timeline-card">
+            <div class="timeline-badge">04/2025 - Present</div>
+            <h3 class="timeline-title font-serif">School of Economics & International Business</h3>
+            <h4 class="timeline-role">Faculty Collaborator</h4>
+            <ul class="timeline-bullets">
+              <li>Supported administrative operations and coordination for academic seminars, workshops, and research-related events.</li>
+              <li>Assisted faculty members in organizing discussions, practical activities, and professional conferences.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-card-wrapper left card-reveal">
+          <div class="glass-card timeline-card">
+            <div class="timeline-badge">06/2025 - 09/2025</div>
+            <h3 class="timeline-title font-serif">DOL English</h3>
+            <h4 class="timeline-role">Content Marketing Intern</h4>
+            <ul class="timeline-bullets">
+              <li>Supported educational content development across social media platforms, contributing to audience engagement.</li>
+              <li>Contributed to website traffic growth of more than 1,000 visits per week through content execution.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-card-wrapper right card-reveal">
+          <div class="glass-card timeline-card">
+            <div class="timeline-badge">01/2025 - 04/2025</div>
+            <h3 class="timeline-title font-serif">Tắt đèn Bật ý tưởng 2025</h3>
+            <h4 class="timeline-role">Member of External Relations Department</h4>
+            <ul class="timeline-bullets">
+              <li>Increased event visibility as measured by 9 media publications by securing partnerships with 7 press agencies.</li>
+              <li>Coordinated external communications strategy and stakeholder relations.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5 -->
+        <div class="timeline-card-wrapper left card-reveal">
+          <div class="glass-card timeline-card">
+            <div class="timeline-badge">03/2025 - 05/2025</div>
+            <h3 class="timeline-title font-serif">Hồi Ức Hoa Lửa Project</h3>
+            <h4 class="timeline-role">Team Leader / Project Manager</h4>
+            <ul class="timeline-bullets">
+              <li>Co-produced digital storytelling content documenting war veterans' memories and preserving historical narratives.</li>
+              <li>Managed timeline, team roles, and designed key visuals and communication materials.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
+      <div class="section-title-wrapper">
+        <span class="badge-pill lime">PROJECTS</span>
+      </div>
+      
+      <!-- Filters -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="pm">Project Management</button>
+        <button class="filter-btn" data-filter="design">Graphic Design</button>
+        <button class="filter-btn" data-filter="content">Content & Scripting</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1: TAC -->
+        <div class="glass-card project-card card-reveal" data-categories="pm design content" data-project="tac">
+          <div class="project-img-wrapper">
+            <img src="images/portfolio_p18_2.png" alt="Talented Auditor Cup 2025" class="project-preview-img">
+            <div class="project-overlay">
+              <span class="btn-view-details">View Details <i class="fa-solid fa-expand"></i></span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-date">12.2024 - 05.2025</span>
+            <h3 class="project-title font-serif">Talented Auditor Cup 2025</h3>
+            <p class="project-summary">National competition for Accounting, Auditing & Finance students, attracting 700+ candidates. Handled role as Project Manager, Lead Graphic Designer, and Script Writer.</p>
+            <div class="project-tags">
+              <span class="badge-tag sm">PM</span>
+              <span class="badge-tag sm">Key Visual</span>
+              <span class="badge-tag sm">Script</span>
+              <span class="badge-tag sm">Social Post</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: IBSynergy -->
+        <div class="glass-card project-card card-reveal" data-categories="pm design" data-project="ibsynergy">
+          <div class="project-img-wrapper">
+            <img src="images/portfolio_p4_3.png" alt="IBSynergy Welcome Event" class="project-preview-img">
+            <div class="project-overlay">
+              <span class="btn-view-details">View Details <i class="fa-solid fa-expand"></i></span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-date">09.2024</span>
+            <h3 class="project-title font-serif">IBSynergy</h3>
+            <p class="project-summary">Welcome event for first-year International Business Advanced Program (K63) students at FTU. Acted as Project Manager and lead visual designer.</p>
+            <div class="project-tags">
+              <span class="badge-tag sm">PM</span>
+              <span class="badge-tag sm">Design</span>
+              <span class="badge-tag sm">Event Planner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Hồi Ức Hoa Lửa -->
+        <div class="glass-card project-card card-reveal" data-categories="pm design content" data-project="hoic">
+          <div class="project-img-wrapper">
+            <img src="images/portfolio_p7_3.png" alt="Hồi Ức Hoa Lửa Project" class="project-preview-img">
+            <div class="project-overlay">
+              <span class="btn-view-details">View Details <i class="fa-solid fa-expand"></i></span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-date">04.2025 - 05.2025</span>
+            <h3 class="project-title font-serif">Hồi Ức Hoa Lửa</h3>
+            <p class="project-summary">A student-led project commemorating historical national resistance, connecting with war veterans, and documenting memories through digital storytelling media.</p>
+            <div class="project-tags">
+              <span class="badge-tag sm">PM</span>
+              <span class="badge-tag sm">Design</span>
+              <span class="badge-tag sm">Storytelling</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="section-title-wrapper">
+        <span class="badge-pill lime">CONTACT</span>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="glass-card contact-info-card card-reveal">
+          <h3 class="font-serif">Let's Connect!</h3>
+          <p>Open to internship roles, event management, media communications, or content design opportunities. Feel free to reach out directly through any of the channels below.</p>
+          
+          <div class="contact-details-list">
+            <div class="contact-detail-item">
+              <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div class="detail-content">
+                <span class="label">Phone</span>
+                <span class="value">0944624406</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+              <div class="detail-content">
+                <span class="label">Email</span>
+                <a href="mailto:nhatlinh446@gmail.com" class="value link">nhatlinh446@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="detail-content">
+                <span class="label">Location</span>
+                <span class="value">Hoang Mai District, Hanoi Capital</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="icon-box"><i class="fa-brands fa-linkedin"></i></div>
+              <div class="detail-content">
+                <span class="label">LinkedIn</span>
+                <a href="https://linkedin.com" target="_blank" class="value link">Nhật Linh Ngô</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card contact-form-card card-reveal">
+          <h3 class="font-serif">Send a Message</h3>
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Name</label>
+                <input type="text" id="form-name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="form-email">Email</label>
+                <input type="email" id="form-email" placeholder="Your email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" placeholder="What are you writing about?" required>
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div id="form-status-msg" class="form-status"></div>
+        </div>
+      </div>
+      
+      <!-- Footer contact panel linking them -->
+      <footer class="portfolio-footer">
+        <div class="footer-contact-pill">
+          <div class="footer-btn">CONTACT</div>
+          <div class="footer-divider-line"></div>
+          <div class="footer-info">
+            <span>0944624406</span>
+            <span class="dot-separator">•</span>
+            <span>nhatlinh446@gmail.com</span>
+          </div>
+        </div>
+        <p class="copyright-text">© 2025 Ngo Nhat Linh. All rights reserved.</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- INTERACTIVE MODAL FOR PROJECT DETAIL -->
+  <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-wrapper">
+      <div class="glass-card modal-content">
+        <!-- Close button -->
+        <button class="modal-close-btn" id="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+        
+        <!-- Modal body -->
+        <div class="modal-grid">
+          <!-- Gallery / Slider Column -->
+          <div class="modal-gallery-col">
+            <div class="gallery-container">
+              <!-- Slides will be loaded dynamically by JS -->
+              <div class="gallery-slides" id="gallery-slides"></div>
+              
+              <!-- Left/Right controls -->
+              <button class="gallery-nav prev" id="gallery-prev"><i class="fa-solid fa-chevron-left"></i></button>
+              <button class="gallery-nav next" id="gallery-next"><i class="fa-solid fa-chevron-right"></i></button>
+              
+              <!-- Dots indicator -->
+              <div class="gallery-dots" id="gallery-dots"></div>
+            </div>
+            <div class="gallery-caption" id="gallery-caption"></div>
+          </div>
+          
+          <!-- Info Column -->
+          <div class="modal-info-col">
+            <span class="badge-pill lime" id="modal-badge">PROJECT DETAIL</span>
+            <h2 class="modal-title font-serif" id="modal-title">Project Name</h2>
+            <div class="modal-meta">
+              <span id="modal-date"><i class="fa-regular fa-calendar"></i> Date</span>
+            </div>
+            
+            <div class="modal-scroll-info">
+              <div class="info-section">
+                <h4>Overview</h4>
+                <p id="modal-overview">Detailed overview of the project...</p>
+              </div>
+              
+              <div class="info-section">
+                <h4>My Roles & Work Deliverables</h4>
+                <div class="roles-container" id="modal-roles">
+                  <!-- Roles dynamically loaded -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
