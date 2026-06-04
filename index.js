@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initFilters();
   initModal();
   initContactForm();
+  initBackgroundMusic();
 });
 
 // 1. Navigation Active Scroll States & Mobile Toggle
@@ -480,5 +481,30 @@ function initContactForm() {
         statusMsg.className = "form-status";
       }, 5000);
     }, 1500);
+  });
+}
+
+// 7. Background Music Controller
+function initBackgroundMusic() {
+  const music = document.getElementById("bg-music");
+  const musicBtn = document.getElementById("music-toggle-btn");
+  if (!music || !musicBtn) return;
+
+  // Set default lower volume so it's not too loud
+  music.volume = 0.25;
+
+  musicBtn.addEventListener("click", () => {
+    if (music.paused) {
+      music.play().then(() => {
+        musicBtn.innerHTML = `<i class="fa-solid fa-volume-high fa-beat" style="--fa-animation-duration: 0.8s; color: var(--color-neon-purple);"></i>`;
+        musicBtn.title = "Pause music";
+      }).catch(err => {
+        console.error("Audio playback blocked by browser:", err);
+      });
+    } else {
+      music.pause();
+      musicBtn.innerHTML = `<i class="fa-solid fa-volume-xmark"></i>`;
+      musicBtn.title = "Play background music!";
+    }
   });
 }

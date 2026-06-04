@@ -32,6 +32,9 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
+        <button id="music-toggle-btn" title="Play background music!" class="btn-icon">
+          <i class="fa-solid fa-volume-xmark"></i>
+        </button>
         <button id="spawn-butterfly-btn" title="Spawn a butterfly!" class="btn-icon">
           <i class="fa-solid fa-wand-magic-sparkles"></i>
         </button>
@@ -78,9 +81,7 @@
     <section id="home" class="hero-section">
       <div class="glass-card hero-card fade-in">
         <div class="hero-logo-box">
-          <span class="decor-butterfly">🦋</span>
           <h1 class="logo-title font-serif">Portfolio</h1>
-          <span class="decor-butterfly right">🦋</span>
         </div>
         <h2 class="hero-subtitle font-pixel">NGO NHAT LINH</h2>
         
@@ -471,6 +472,7 @@
     </div>
   </div>
 
+  <audio id="bg-music" src="https://assets.codepen.io/25868/chill.mp3" loop></audio>
   <script src="index.js"></script>
 </body>
 </html>
