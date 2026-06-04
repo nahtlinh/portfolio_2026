@@ -547,36 +547,69 @@ section {
   margin-top: 10px;
 }
 
-.notebook-paper-frame {
+.profile-glow-frame {
   position: relative;
-  background-color: #fcfbf7;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.08), -1px -1px 2px rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 6px;
+  background: linear-gradient(135deg, rgba(199, 242, 85, 0.4) 0%, rgba(240, 125, 245, 0.4) 100%);
+  box-shadow: 0 8px 32px 0 rgba(199, 242, 85, 0.2), 
+              0 0 20px 3px rgba(199, 242, 85, 0.15), 
+              0 0 35px 8px rgba(240, 125, 245, 0.1);
+  transition: var(--transition-smooth);
   max-width: 320px;
-  border: 1px solid #e8e3d5;
+  display: inline-block;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-/* Grid ruled lines */
-.notebook-paper-frame::before {
+.profile-glow-frame::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 20px;
-  width: 1px;
-  height: 100%;
-  background-color: #ffb3b3;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent, 
+    var(--color-lime) 20%, 
+    transparent 40%, 
+    var(--color-neon-purple) 60%, 
+    transparent 80%
+  );
+  animation: rotate-glow 6s linear infinite;
   z-index: 1;
 }
 
-.profile-img {
+.profile-glow-frame:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 40px 0 rgba(199, 242, 85, 0.3), 
+              0 0 30px 6px rgba(199, 242, 85, 0.25), 
+              0 0 45px 12px rgba(240, 125, 245, 0.15);
+}
+
+.profile-img-wrapper {
   position: relative;
   z-index: 2;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.profile-img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-glow-frame:hover .profile-img {
+  transform: scale(1.05);
+}
+
+@keyframes rotate-glow {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .card-subtitle {

@@ -289,19 +289,27 @@ function initFilters() {
 
       projectCards.forEach(card => {
         const categories = card.getAttribute("data-categories").split(" ");
+        
+        // Clear any pending animation timeout to prevent rapid-click display bugs
+        if (card.dataset.timeoutId) {
+          clearTimeout(Number(card.dataset.timeoutId));
+        }
+
         if (filterVal === "all" || categories.includes(filterVal)) {
           card.style.display = "flex";
           // Re-trigger animation
-          setTimeout(() => {
+          const tid = setTimeout(() => {
             card.style.opacity = "1";
             card.style.transform = "scale(1)";
           }, 50);
+          card.dataset.timeoutId = tid;
         } else {
           card.style.opacity = "0";
           card.style.transform = "scale(0.95)";
-          setTimeout(() => {
+          const tid = setTimeout(() => {
             card.style.display = "none";
           }, 300);
+          card.dataset.timeoutId = tid;
         }
       });
     });
@@ -459,6 +467,7 @@ function initContactForm() {
     
     setTimeout(() => {
       // Simulate success
+      statusMsg.style.display = ""; // Reset inline display styles if previously set
       statusMsg.className = "form-status success";
       statusMsg.textContent = "Thank you! Your message has been sent successfully.";
       form.reset();
@@ -466,9 +475,9 @@ function initContactForm() {
       submitBtn.disabled = false;
       submitBtn.innerHTML = origHtml;
 
-      // Clear message after 5 seconds
+      // Clear message after 5 seconds by resetting CSS class instead of hardcoding display:none
       setTimeout(() => {
-        statusMsg.style.display = "none";
+        statusMsg.className = "form-status";
       }, 5000);
     }, 1500);
   });
