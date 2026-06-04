@@ -425,10 +425,13 @@ section {
 
 .logo-title {
   font-size: 5rem;
-  font-weight: 400;
-  color: #ffffff;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 255, 255, 0.4);
-  line-height: 1;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-text-dark) 20%, var(--color-neon-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  filter: drop-shadow(0 4px 8px rgba(27, 38, 17, 0.12));
 }
 
 .hero-subtitle {
